@@ -31,7 +31,8 @@ import PaymentCancel from "../components/PaymentCancel";
 import EmailVerify from "../components/EmailVerify";
 // import DeliveryPanel from "../components/Order Tracking/DeliveryPanel";
 // import OrderTracking from "../components/Order Tracking/OrderTracking";
-import UserdMain from './../pages/dashboard/user/dashboard/UserdMain';
+import UserDMain from './../pages/dashboard/user/dashboard/UserdMain';
+
 
 const router = createBrowserRouter([
     {
@@ -116,7 +117,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
         children: [
             // user Dashboard
-            { path: '', element: <UserdMain/> },
+            { path: '', element: <UserDMain/> },
             { path: 'orders', element: <UserOrder /> },
             { path: 'payments', element: <UserPayments /> },
             { path: 'profile', element: <UserProfile /> },
