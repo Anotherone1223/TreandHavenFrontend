@@ -10,7 +10,6 @@ import Register from "../components/Register";
 import PaymentSuccess from "../components/PaymentSuccess";
 import DashboardLayout from "../pages/dashboard/DashboardLayout";
 import PrivateRoute from "./PrivateRoute";
-import UserDMain from "../pages/dashboard/user/dashboard/UserDMain";
 import UserdMain from "../pages/dashboard/user/dashboard/UserDMain";
 import UserOrder from "../pages/dashboard/user/UserOrder";
 import OrderDetails from "../pages/dashboard/user/OrderDetails";
