@@ -5,7 +5,7 @@ import { data, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
 import { getBaseUrl } from '../../utils/baseURL';
-import { addUserAddress, setUserAddress } from '../../redux/features/address/AddressSlice';
+import { addUserAddress, setUserAddress } from '../../redux/address/AddressSlice';
 import Swal from 'sweetalert2';
 
 const ShippingAddress = () => {

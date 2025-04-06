@@ -1,7 +1,7 @@
 import React from 'react'
 import { Mail, MapPin, Phone, User, Building, Globe2, Trash2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeUserAddress } from '../../../../redux/features/address/AddressSlice';
+import { removeUserAddress } from '../../../../redux/address/AddressSlice';
 import Swal from 'sweetalert2';
 
 
