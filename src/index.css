@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+/* 
+
+:root {
+    --primary: #ed3849;
+    --primary-dark: #d23141;
+    --primary-light: #f4e5ec;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
+    --extra-light: #f8fafc;
+}
+
+/* Dark mode variables */
+/* .dark {
+    --primary: #c72c3b;
+    --primary-dark: #a92530;
+    --primary-light: #3b3b3b;
+    --text-dark: #ffffff;
+    --text-light: #cbd5e1;
+    --extra-light: #1e293b;
+}  */
+
+body.dark-mode {
+    --primary-color: #ff4b5c;
+    --primary-color-dark: #c73344;
+    --primary-color-light: #1a202c;
+    --text-dark: #ffffff;
+    --text-light: #d1d5db;
+    --extra-light: #1f2937;
+    --white: #111827;
+  }
