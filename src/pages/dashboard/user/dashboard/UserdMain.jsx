@@ -9,7 +9,7 @@ import UserStats from './UserStats';
 // ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
-const UserDMain = () => {
+const UserdMain = () => {
     const { user } = useSelector((state) => state.auth);
     const { data: stats, error, isLoading } = useGetUsersStatsQuery(user?.email)
     console.log(stats)
@@ -64,4 +64,4 @@ const UserDMain = () => {
     )
 }
 
-export default UserDMain
+export default UserdMain

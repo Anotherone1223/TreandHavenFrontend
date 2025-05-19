@@ -6,7 +6,7 @@ import productsApi from './features/products/productsApi'
 import reviewApi from './features/reviews/reviewsApi'
 import statsApi from './features/stats/statsApi'
 import orderApi from './features/orders/orderApi'
-import addressReducer from '../redux/features/address/AddressSlice'
+import addressReducer from './features/address/AddressSlice'
 
 
 

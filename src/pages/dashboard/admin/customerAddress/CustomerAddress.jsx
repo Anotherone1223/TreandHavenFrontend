@@ -1,9 +1,9 @@
 import React from 'react'
 import { Mail, MapPin, Phone, User, Building, Globe2, Trash2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { removeUserAddress } from '../../../features/address/AddressSlice';
 import Swal from 'sweetalert2';
-import { removeUserAddress } from '../../../../redux/address/AddressSlice';
+// import { removeUserAddress } from '../../../../redux/features/address/AddressSlice';
+
 
 
 const CustomerAddress = () => {
@@ -38,28 +38,28 @@ const CustomerAddress = () => {
     console.log(addresses);
 
     
-const handleDeleteAddress = (index) => {
-  Swal.fire({
-    title: 'Are you sure?',
-    text: "This address will be removed from your list!",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes, delete it!',
-  }).then((result) => {
-    if (result.isConfirmed) {
-      dispatch(removeUserAddress(index));
-      Swal.fire({
-        title: 'Deleted!',
-        text: 'Address has been removed.',
-        icon: 'success',
-        timer: 2000,
-        showConfirmButton: false,
-      });
-    }
-  });
-};
+// const handleDeleteAddress = (index) => {
+//   Swal.fire({
+//     title: 'Are you sure?',
+//     text: "This address will be removed from your list!",
+//     icon: 'warning',
+//     showCancelButton: true,
+//     confirmButtonColor: '#3085d6',
+//     cancelButtonColor: '#d33',
+//     confirmButtonText: 'Yes, delete it!',
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       dispatch(removeUserAddress(index));
+//       Swal.fire({
+//         title: 'Deleted!',
+//         text: 'Address has been removed.',
+//         icon: 'success',
+//         timer: 2000,
+//         showConfirmButton: false,
+//       });
+//     }
+//   });
+// };
 
     return (
         <div>
@@ -127,12 +127,7 @@ const handleDeleteAddress = (index) => {
                 <p className="text-gray-800 dark:text-gray-200">{address.phone}</p>
               </div>
              <div>
-             <button  onClick={() => handleDeleteAddress(index)}
-              className='flex items-center  space-x-2 text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-600'
-              >
-                <Trash2 className="w-5 h-5" />
-                <span>Delete</span>
-             </button>
+             
              </div>
             </div>
           </div>
@@ -144,7 +139,12 @@ const handleDeleteAddress = (index) => {
 }
 
 export default CustomerAddress
-
+//<button  onClick={() => handleDeleteAddress(index)}
+  //            className='flex items-center  space-x-2 text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-600'
+       //       >
+    //            <Trash2 className="w-5 h-5" />
+      //          <span>Delete</span>
+        //     </button>
 
 
 

@@ -5,8 +5,8 @@ import { data, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
 import { getBaseUrl } from '../../utils/baseURL';
-import { addUserAddress, setUserAddress } from '../../features/address/AddressSlice';
 import Swal from 'sweetalert2';
+import { addUserAddress, setUserAddress } from '../../redux/features/address/AddressSlice';
 
 const ShippingAddress = () => {
     const dispatch = useDispatch();
@@ -46,7 +46,7 @@ const ShippingAddress = () => {
 
     };
 
-    console.log(data);
+    // console.log(data);
 
 
 
@@ -61,7 +61,10 @@ const ShippingAddress = () => {
         const body = {
             products: products,
             userId: user?._id
-        }
+        }   
+
+        console.log("🧾 Full products:", products);
+
 
         const headers = {
             "Content-Type": "application/json"
@@ -301,7 +304,7 @@ const ShippingAddress = () => {
                                                     Processing...
                                                 </span>
                                             ) : (
-                                                'Save Address'
+                                                'Save Address & Pay'
                                             )}
                                         </button>
 
